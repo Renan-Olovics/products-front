@@ -23,15 +23,24 @@ export const BasicInput = forwardRef(
       <div className="flex rounded flex-col">
         {label && (
           <label htmlFor={rest.name} className="text-mad mb-1 text-black dark:text-gray-200">
-            {label}\rules\ban-ts-comment
+            {label}
           </label>
         )}
         {mask ? (
-          /* @ts-ignore */
-          <InputMask ref={ref} className={className} type={type} mask={mask} {...rest} />
+          <InputMask
+            ref={ref as LegacyRef<ReactInputMask>}
+            className={className}
+            type={type}
+            mask={mask}
+            {...rest}
+          />
         ) : (
-          /* @ts-ignore */
-          <input ref={ref} className={className} type={type} {...rest} />
+          <input
+            ref={ref as LegacyRef<HTMLInputElement>}
+            className={className}
+            type={type}
+            {...rest}
+          />
         )}
         {error && <span className="error">{error}</span>}
       </div>
