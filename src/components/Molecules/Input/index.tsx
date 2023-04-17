@@ -15,5 +15,3 @@ export const Input = ({ name = 'name', defaultValue = '', ...rest }: BasicInputP
     />
   )
 }
-
-// https://github.com/sanniassin/react-input-mask
