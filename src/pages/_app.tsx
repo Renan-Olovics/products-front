@@ -1,7 +1,11 @@
-import type { AppProps } from 'next/app'
 import { Roboto } from 'next/font/google'
+import type { AppProps } from 'next/app'
+
+import { ToastContainer } from 'react-toastify'
+import { AppProvider } from '@/contexts'
 
 import '@/styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -12,7 +16,10 @@ const roboto = Roboto({
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <main className={roboto.variable}>
-      <Component {...pageProps} />
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
+      <ToastContainer />
     </main>
   )
 }
