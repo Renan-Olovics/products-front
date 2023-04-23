@@ -15,6 +15,16 @@ module.exports = {
       fontFamily: {
         roboto: ['--font-Roboto', 'sans-serif'],
       },
+      colors: {
+        'primary-background': '#2A2331',
+        'dark-purple-800': '#120A19',
+      },
+      fontSize: {
+        '2xs': '0.5rem',
+      },
+      lineHeight: {
+        'extra-loose': '2.5',
+      },
     },
   },
   plugins: [],

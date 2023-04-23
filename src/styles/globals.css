@@ -27,4 +27,10 @@ body {
   .error {
     @apply dark:text-red-400 dark:border-red-400 border-red-600 text-red-600;
   }
+
+  .display-grid-200 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 30px;
+  }
 }
