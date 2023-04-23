@@ -26,7 +26,7 @@ export const usePutProduct = (props?: Props) => {
     onMutate: props?.onMutate,
     onSettled: props?.onSettled,
     onSuccess: props?.onSuccess,
-    mutationKey: ['products', 'post'],
+    mutationKey: ['products', 'put'],
     mutationFn: async (product) => {
       const { data } = await api.put<Product>(`/products/${product.id}`, product)
       return data
